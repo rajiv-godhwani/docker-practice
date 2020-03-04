@@ -18,7 +18,14 @@ public class HookCopy {
     @RequestMapping("/greeting")
     @ResponseBody
     public String onNewProject(@RequestParam String name) {
-        return !"sports".equals(name) ? "Incorrect secret key.Try again!" : "Shabaaaaash!!!";
+		if("amazon".equals(name)){
+			return "Shabaaaaash!!!";
+		}else if("cogitate".equals(name)){
+			return "Nikal... pehli fursat mei nikal";
+		}
+		else{
+			return "Tera kuch nahi ho sakta";
+		}
     }
 
 }
